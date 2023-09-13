@@ -323,7 +323,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8f62ecb61bed9c4abbf28b682bd399c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: []
+  points:
+  - {fileID: 1495046391}
+  - {fileID: 1754943082}
+  - {fileID: 1284234003}
   monsterPool: []
   maxMonsters: 10
   monster: {fileID: 7547512814342186316, guid: 7e5b90edc7d0c6e49b8c54bad8c494a9, type: 3}
