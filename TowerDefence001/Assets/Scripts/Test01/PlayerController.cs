@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerController2D : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     public Transform pivot;               // ÇÇº¿ Æ÷ÀÎÆ®
     public GameObject bulletPrefab;       // ÃÑ¾Ë ÇÁ¸®ÆÕ
