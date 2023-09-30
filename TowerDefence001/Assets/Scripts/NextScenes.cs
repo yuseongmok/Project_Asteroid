@@ -8,6 +8,6 @@ public class NextScenes : MonoBehaviour
 
     public void LoadNextScene()
     {
-        SceneManager.LoadScene(targetSceneIndex); // 다음 씬으로 전환합니다.
+        LoadingScene.LoadScene("Play");
     }
 }
