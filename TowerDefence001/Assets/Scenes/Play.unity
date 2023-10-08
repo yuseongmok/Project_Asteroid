@@ -306,6 +306,12 @@ MonoBehaviour:
   - {fileID: 1762356547818739398, guid: 26ec6314433b83149b3a3873f3de2a6b, type: 3}
   - {fileID: 771025937887861229, guid: f9a80ce4ff8c29e4f8e688c3d634b19e, type: 3}
   spawnPoint: {fileID: 2048010151}
+  pivot: {fileID: 875596179}
+  bulletPrefab: {fileID: 3121810964294527954, guid: 8cd7e2aa7c916fd4dbb53f108305d09e, type: 3}
+  firePoint: {fileID: 1682994311}
+  rotationSpeed: 20
+  minAngle: -45
+  maxAngle: 45
 --- !u!1 &420528888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1122,7 +1128,6 @@ GameObject:
   m_Component:
   - component: {fileID: 875596179}
   - component: {fileID: 875596178}
-  - component: {fileID: 875596180}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1198,22 +1203,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &875596180
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 875596177}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58b098e4661b67479868cebe41f8f55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pivot: {fileID: 875596179}
-  bulletPrefab: {fileID: 3121810964294527954, guid: 8cd7e2aa7c916fd4dbb53f108305d09e, type: 3}
-  firePoint: {fileID: 1682994311}
-  rotationSpeed: 20
 --- !u!1 &1439985610
 GameObject:
   m_ObjectHideFlags: 0
