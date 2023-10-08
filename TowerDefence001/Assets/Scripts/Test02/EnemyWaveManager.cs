@@ -8,7 +8,7 @@ public class EnemyWaveManager : MonoBehaviour
 {
           //웨이브 수 리스트 코드 작성 해야함
     public List<GameObject> EnemyCount;                             //적 순서
-    public List<Vector2> startPos = new List<Vector2>();            //적 스폰 위치
+    public List<GameObject> startPos;            //적 스폰 위치
     public float Spawntime = 0.0f;
     public float currentTime = 0;
     public int SpawnCount = 0;
@@ -42,7 +42,7 @@ public class EnemyWaveManager : MonoBehaviour
     {
         waveStart = true;
         GameObject go = Instantiate(EnemyCount[SpawnCount]);
-        go.transform.position = startPos[SpawnCount];
+        
         SpawnCount++;
     }
 }
