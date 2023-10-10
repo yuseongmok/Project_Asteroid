@@ -6,17 +6,18 @@ using TMPro;
 
 public class WaveSystem : MonoBehaviour
 {
-    //Wave
-    public Button waveButton;  // Wave를 시작할 버튼
-    public TextMeshProUGUI waveText;      // Wave 수를 표시할 UI Text 요소
-    public List<GameObject> enemyPrefabs;  // Enemy 게임 오브젝트 프리팹 리스트
-    public Transform spawnPoint;  // Enemy가 생성될 위치
+    //Wave(wave 구현)
+    public Button waveButton;              // Wave를 시작할 버튼
+    public TextMeshProUGUI waveText;       // Wave 수를 표시할 UI Text 요소
+    public List<GameObject> enemyPrefabs;  // 각 웨이브마다 나오는 Enemy 패턴
+    public Transform spawnPoint;           // Enemy가 생성될 위치
 
-    private int currentWave = 0;  // 현재 Wave 번호
-    private int currentEnemyIndex = 0;  // 현재 Enemy 프리팹 인덱스
+    private int currentWave = 0;            // 현재 Wave 번호
+    private int currentEnemyIndex = 0;      // 현재 Enemy 프리팹 인덱스
     private bool isWaveInProgress = false;  // Wave 진행 중인지 여부
+    public GameObject Enemy;                
 
-    //Player
+    //Player(메인 주포)
     public Transform pivot;               // 피봇 포인트
     public GameObject bulletPrefab;       // 총알 프리팹
     public Transform firePoint;           // 총알 발사 위치
@@ -30,7 +31,7 @@ public class WaveSystem : MonoBehaviour
 
     private void Start()
     {
-        //Wave
+        //Wave 코드
         waveButton.onClick.AddListener(StartWave);  // 버튼 클릭 이벤트 리스너 추가
         UpdateWaveText();  // 초기 Wave 번호 표시
 
@@ -39,7 +40,7 @@ public class WaveSystem : MonoBehaviour
 
     private void UpdateWaveText()
     {
-        //Wave
+        //Wave 코드
         if (currentEnemyIndex < enemyPrefabs.Count)
         {
             waveText.text = "Wave " + currentWave.ToString();  // UI Text 업데이트
@@ -52,7 +53,7 @@ public class WaveSystem : MonoBehaviour
 
     private void Update()
     {
-        
+        // Wave 진행될 때
         if (isWaveInProgress)
         {
             //Wave
@@ -65,9 +66,12 @@ public class WaveSystem : MonoBehaviour
             {
                 isWaveInProgress = false;
                 waveButton.interactable = true;  // Wave가 종료되면 버튼을 활성화
+                Destroy(Enemy);
             }
 
-            //Player
+            
+
+            //Player(메인주포 코드)
 
             // 피봇을 마우스 위치로 회전시킴
             RotatePivotToMouse();
@@ -82,8 +86,8 @@ public class WaveSystem : MonoBehaviour
         }
         else
         {
-            // Wave가 종료되면 버튼을 활성화
-            waveButton.interactable = true;
+                // Wave가 종료되면 버튼을 활성화
+                waveButton.interactable = true;
         }
 
         
@@ -100,6 +104,7 @@ public class WaveSystem : MonoBehaviour
         {
             // 순서대로 Enemy 프리팹을 선택하여 생성
             GameObject enemy = Instantiate(enemyPrefabs[currentEnemyIndex], spawnPoint.position, Quaternion.identity);
+            Enemy = enemy;
             currentEnemyIndex++;
         }
         else
@@ -115,9 +120,13 @@ public class WaveSystem : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         return enemies.Length == 0;
+        
+        
+       
     }
 
-    //Player
+    //Player(메인주포 코드)
+
     void RotatePivotToMouse()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
