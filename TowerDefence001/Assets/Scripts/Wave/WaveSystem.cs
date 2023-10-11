@@ -11,11 +11,12 @@ public class WaveSystem : MonoBehaviour
     public TextMeshProUGUI waveText;       // Wave 수를 표시할 UI Text 요소
     public List<GameObject> enemyPrefabs;  // 각 웨이브마다 나오는 Enemy 패턴
     public Transform spawnPoint;           // Enemy가 생성될 위치
+    public Image imageToControl;        // 숨기거나 표시할 이미지
 
     private int currentWave = 0;            // 현재 Wave 번호
     private int currentEnemyIndex = 0;      // 현재 Enemy 프리팹 인덱스
     private bool isWaveInProgress = false;  // Wave 진행 중인지 여부
-    public GameObject Enemy;                
+    public GameObject Enemy;
 
     //Player(메인 주포)
     public Transform pivot;               // 피봇 포인트
@@ -27,7 +28,7 @@ public class WaveSystem : MonoBehaviour
     private bool isFiring = false;        // 발사 중 여부
 
 
-   
+
 
     private void Start()
     {
@@ -35,7 +36,7 @@ public class WaveSystem : MonoBehaviour
         waveButton.onClick.AddListener(StartWave);  // 버튼 클릭 이벤트 리스너 추가
         UpdateWaveText();  // 초기 Wave 번호 표시
 
-        
+
     }
 
     private void UpdateWaveText()
@@ -69,7 +70,7 @@ public class WaveSystem : MonoBehaviour
                 Destroy(Enemy);
             }
 
-            
+
 
             //Player(메인주포 코드)
 
@@ -82,15 +83,15 @@ public class WaveSystem : MonoBehaviour
                 Shoot();
             }
 
-            
+
         }
         else
         {
-                // Wave가 종료되면 버튼을 활성화
-                waveButton.interactable = true;
+            // Wave가 종료되면 버튼을 활성화
+            waveButton.interactable = true;
         }
 
-        
+
     }
 
     // Wave를 시작하는 함수
@@ -113,6 +114,8 @@ public class WaveSystem : MonoBehaviour
         }
 
         isWaveInProgress = true;  // Wave 진행 중으로 설정
+        waveButton.interactable = false;
+        HideImage();
     }
 
     // Wave가 완료되었는지 확인하는 함수
@@ -120,9 +123,25 @@ public class WaveSystem : MonoBehaviour
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         return enemies.Length == 0;
-        
-        
-       
+
+
+
+    }
+    //웨이브 버튼 이미지를 숨김
+    private void HideImage()
+    {
+        if (imageToControl != null)
+        {
+            imageToControl.enabled = false;
+        }
+    }
+    //웨이브 버튼 이미지 다시 보이기
+    private void ShowImage()
+    {
+        if (imageToControl != null)
+        {
+            imageToControl.enabled = true;
+        }
     }
 
     //Player(메인주포 코드)
@@ -147,4 +166,5 @@ public class WaveSystem : MonoBehaviour
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
+
 
