@@ -8,6 +8,7 @@ public class MonsterController : MonoBehaviour
     public float moveSpeed = 5.0f; // 몬스터 이동 속도
     public int maxHealth = 50; // 최대 체력
     private int currentHealth; // 현재 체력
+    public int damage = 10;
 
     void Start()
     {
