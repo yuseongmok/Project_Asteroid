@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 
-public class BulletController : MonoBehaviour
+public class PlayerBullet : MonoBehaviour
 {
     public float lifespan = 2.0f;
     public float moveSpeed = 5.0f; // 몬스터 이동 속도
