@@ -27,7 +27,7 @@ public class WaveSystem : MonoBehaviour
     public float maxAngle = 45.0f;        // 최대 회전 각도
     private bool isFiring = false;        // 발사 중 여부
 
-
+    public SoundManager soundManager;
 
 
     private void Start()
@@ -35,6 +35,7 @@ public class WaveSystem : MonoBehaviour
         //Wave 코드
         waveButton.onClick.AddListener(StartWave);  // 버튼 클릭 이벤트 리스너 추가
         UpdateWaveText();  // 초기 Wave 번호 표시
+        soundManager.PlaySound(0);
 
 
     }
@@ -67,6 +68,7 @@ public class WaveSystem : MonoBehaviour
             {
                 isWaveInProgress = false;
                 waveButton.interactable = true;  // Wave가 종료되면 버튼을 활성화
+                soundManager.StopSound(1);
                 Destroy(Enemy);
             }
 
@@ -107,6 +109,8 @@ public class WaveSystem : MonoBehaviour
             GameObject enemy = Instantiate(enemyPrefabs[currentEnemyIndex], spawnPoint.position, Quaternion.identity);
             Enemy = enemy;
             currentEnemyIndex++;
+            soundManager.StopSound(0);
+            soundManager.PlaySound(1);
         }
         else
         {
@@ -115,6 +119,7 @@ public class WaveSystem : MonoBehaviour
 
         isWaveInProgress = true;  // Wave 진행 중으로 설정
         waveButton.interactable = false;
+
         HideImage();
     }
 
