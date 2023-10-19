@@ -105,10 +105,9 @@ public class WaveSystem : MonoBehaviour
     private void StartWave()
     {
         //Wave
-        currentWave++;  // Wave 번호 증가
-        UpdateWaveText();  // Wave 번호 업데이트
+        isWaveInProgress = true;  // Wave 진행 중으로 설정
         UITowerButtonGroup.SetActive(false);
-        
+        waveButton.interactable = false;
 
         if (currentEnemyIndex < enemyPrefabs.Count)
         {
@@ -123,9 +122,10 @@ public class WaveSystem : MonoBehaviour
         {
             Debug.Log("모든 Enemy 프리팹이 생성되었습니다.");
         }
-
-        isWaveInProgress = true;  // Wave 진행 중으로 설정
-        waveButton.interactable = false;
+        currentWave++;  // Wave 번호 증가
+        UpdateWaveText();  // Wave 번호 업데이트
+        
+       
 
         HideImage();
     }

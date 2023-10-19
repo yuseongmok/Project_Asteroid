@@ -55,5 +55,18 @@ public class TowerBullet : MonoBehaviour
             // 총알 제거
             Destroy(gameObject);
         }
+
+        if (other.CompareTag("Money"))
+        {
+            // 적 오브젝트에 데미지를 입힘
+            MonsterController enemyHealth = other.GetComponent<MonsterController>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+
+            // 총알 제거
+            Destroy(gameObject);
+        }
     }
 }

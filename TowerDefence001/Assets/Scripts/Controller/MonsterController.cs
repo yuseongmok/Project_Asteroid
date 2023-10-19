@@ -25,30 +25,35 @@ public class MonsterController : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         currentHealth -= damageAmount; // 데미지만큼 현재 체력 감소
-        Debug.Log("공격에 맞음");
+        Debug.Log("적이 공격을 맞음");
         if (currentHealth <= 0)
         {
             Die(); // 체력이 0 이하로 떨어지면 사망 처리
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
     void Die()
     {
-        // 여기에 적 캐릭터가 사망할 때 수행할 작업을 추가할 수 있습니다.
-        // 예: 점수 증가, 이펙트 재생 등
-        gameObject.SetActive(false);
+        if (gameObject.CompareTag("Money"))
+        {
+            MoneyManager.Instance.AddMoney(25);
+            Debug.Log("돈 운석 파괴됨");
+        }
+            // 여기에 적 캐릭터가 사망할 때 수행할 작업을 추가할 수 있습니다.
+            // 예: 점수 증가, 이펙트 재생 등
+            gameObject.SetActive(false);
     }
 
     internal void ResetHealth()
     {
         throw new NotImplementedException();
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.CompareTag("Player"))
-        {
-            Destroy(gameObject);
-        }
     }
 }

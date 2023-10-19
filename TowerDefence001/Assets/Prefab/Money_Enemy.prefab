@@ -114,8 +114,8 @@ GameObject:
   - component: {fileID: -5386562005787000268}
   - component: {fileID: -307703495565171966}
   m_Layer: 0
-  m_Name: Enemy
-  m_TagString: Enemy
+  m_Name: Money_Enemy
+  m_TagString: Money
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

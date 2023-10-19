@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
@@ -30,6 +26,19 @@ public class PlayerBullet : MonoBehaviour
     {
         // 총알이 다른 오브젝트에 충돌했을 때
         if (other.CompareTag("Enemy"))
+        {
+            // 적 오브젝트에 데미지를 입힘
+            MonsterController enemyHealth = other.GetComponent<MonsterController>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.TakeDamage(damage);
+            }
+
+            // 총알 제거
+            Destroy(gameObject);
+        }
+
+        if (other.CompareTag("Money"))
         {
             // 적 오브젝트에 데미지를 입힘
             MonsterController enemyHealth = other.GetComponent<MonsterController>();
