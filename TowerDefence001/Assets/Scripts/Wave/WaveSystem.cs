@@ -29,6 +29,9 @@ public class WaveSystem : MonoBehaviour
 
     public SoundManager soundManager;
 
+    public GameObject UITowerButtonGroup;
+    
+
 
     private void Start()
     {
@@ -68,6 +71,8 @@ public class WaveSystem : MonoBehaviour
             {
                 isWaveInProgress = false;
                 waveButton.interactable = true;  // Wave가 종료되면 버튼을 활성화
+                UITowerButtonGroup.SetActive(true);
+                
                 soundManager.StopSound(1);
                 Destroy(Enemy);
             }
@@ -102,6 +107,8 @@ public class WaveSystem : MonoBehaviour
         //Wave
         currentWave++;  // Wave 번호 증가
         UpdateWaveText();  // Wave 번호 업데이트
+        UITowerButtonGroup.SetActive(false);
+        
 
         if (currentEnemyIndex < enemyPrefabs.Count)
         {
