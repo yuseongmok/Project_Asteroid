@@ -31,7 +31,7 @@ public class ShopUI : MonoBehaviour
 
     private void TowerInstantiate()
     {
-        TowerSlot = Instantiate<GameObject>(Tower[ImageIndex]).transform;
+        Instantiate<GameObject>(Tower[ImageIndex], TowerSlot.position, Quaternion.identity);
     }
 
     private void OnButtonClick(int index)
