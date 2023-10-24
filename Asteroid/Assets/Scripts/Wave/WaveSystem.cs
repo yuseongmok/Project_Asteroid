@@ -25,10 +25,12 @@ public class WaveSystem : MonoBehaviour
     public float rotationSpeed = 5.0f;    // 피봇 회전 속도
     public float minAngle = -45.0f;       // 최소 회전 각도
     public float maxAngle = 45.0f;        // 최대 회전 각도
-    private bool isFiring = false;        // 발사 중 여부
+    public float timer = 0.0f;
 
+    //사운드 매니저
     public SoundManager soundManager;
 
+    //Slot UI
     public GameObject UITowerButtonGroup;
     
 
@@ -77,12 +79,12 @@ public class WaveSystem : MonoBehaviour
                 Destroy(Enemy);
             }
 
-
-
             //Player(메인주포 코드)
 
             // 피봇을 마우스 위치로 회전시킴
             RotatePivotToMouse();
+
+            timer += Time.deltaTime;
 
             // 마우스 클릭으로 총알 발사
             if (Input.GetMouseButtonDown(0))
@@ -97,8 +99,6 @@ public class WaveSystem : MonoBehaviour
             // Wave가 종료되면 버튼을 활성화
             waveButton.interactable = true;
         }
-
-
     }
 
     // Wave를 시작하는 함수
@@ -174,8 +174,12 @@ public class WaveSystem : MonoBehaviour
 
     void Shoot()
     {
-        // 총알을 발사 위치에서 생성
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if(timer >= 1.5f)
+        {
+            // 총알을 발사 위치에서 생성
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            timer = 0.0f;
+        }
     }
 }
 
