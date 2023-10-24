@@ -60,6 +60,15 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
+        // 타겟 방향 벡터를 얻어옵니다.
+        Vector3 targetDirection = (target.position - gunTransform.position).normalized;
+
+        // Z축 회전 각도를 계산합니다.
+        float angle = Mathf.Atan2(targetDirection.y, targetDirection.x) * Mathf.Rad2Deg;
+
+        // 총알 발사 위치의 Z축 회전을 설정합니다.
+        gunTransform.rotation = Quaternion.Euler(0f, 0f, angle);
+
         GameObject bulletGO = Instantiate(bulletPrefab, gunTransform.position, gunTransform.rotation);
         TowerBullet bullet = bulletGO.GetComponent<TowerBullet>();
 

@@ -486,7 +486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 106141508}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.56, y: 3.21, z: -0.9758614}
+  m_LocalPosition: {x: -7.366, y: 3.887, z: -0.9758614}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -718,6 +718,7 @@ MonoBehaviour:
   rotationSpeed: 50
   minAngle: -45
   maxAngle: 45
+  timer: 0
   soundManager: {fileID: 587843271}
   UITowerButtonGroup: {fileID: 722312587}
 --- !u!1 &420528888
