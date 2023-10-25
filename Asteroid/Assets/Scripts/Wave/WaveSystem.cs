@@ -32,23 +32,22 @@ public class WaveSystem : MonoBehaviour
 
     //Slot UI
     public GameObject UITowerButtonGroup;
+    public GameObject ShopUI;
+
+
     
-
-
     private void Start()
     {
         //Wave 코드
         waveButton.onClick.AddListener(StartWave);  // 버튼 클릭 이벤트 리스너 추가
         UpdateWaveText();  // 초기 Wave 번호 표시
         soundManager.PlaySound(0);
-
-
     }
 
     private void UpdateWaveText()
     {
         //Wave 코드
-        if (currentEnemyIndex < enemyPrefabs.Count)
+        if (currentEnemyIndex < enemyPrefabs.Count + 1)
         {
             waveText.text = "Wave " + currentWave.ToString();  // UI Text 업데이트
         }
@@ -108,6 +107,7 @@ public class WaveSystem : MonoBehaviour
         isWaveInProgress = true;  // Wave 진행 중으로 설정
         UITowerButtonGroup.SetActive(false);
         waveButton.interactable = false;
+        ShopUI.SetActive(false); //ShopUi 창 비활성화
 
         if (currentEnemyIndex < enemyPrefabs.Count)
         {
@@ -125,18 +125,20 @@ public class WaveSystem : MonoBehaviour
         currentWave++;  // Wave 번호 증가
         UpdateWaveText();  // Wave 번호 업데이트
         
-       
+
+
 
         HideImage();
     }
+
+    
 
     // Wave가 완료되었는지 확인하는 함수
     private bool CheckWaveComplete()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         return enemies.Length == 0;
-
-
+        
 
     }
     //웨이브 버튼 이미지를 숨김

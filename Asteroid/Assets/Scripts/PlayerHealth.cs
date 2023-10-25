@@ -11,7 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth; // 현재 체력
 
     public Slider healthBar; // HP 바 UI
-
+    MonsterController Enemy;
+    
     private void Start()
     {
         currentHealth = maxHealth;
@@ -23,20 +24,24 @@ public class PlayerHealth : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(10);
+            
             
             Debug.Log("공격에 맞음");
         }
     }
 
-    private void TakeDamage(int damage)
+    
+
+
+    public void TakeDamage1(int damage)
     {
         currentHealth -= damage;
         healthBar.value = currentHealth;
 
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
            
+            Die();
         }
     }
 

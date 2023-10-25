@@ -19,6 +19,8 @@ public class ShopUI : MonoBehaviour
     public List<GameObject> Tower;
     public Transform TowerSlot;
 
+    public List<int> towerCosts;
+
     void Start()
     {
         // 모든 Button에 클릭 이벤트를 연결
@@ -29,9 +31,28 @@ public class ShopUI : MonoBehaviour
         tower.onClick.AddListener(TowerInstantiate);
     }
 
+    //상점 구매하기 버튼 누르면 실행하는 함수
     private void TowerInstantiate()
-    {
-        Instantiate<GameObject>(Tower[ImageIndex], TowerSlot.position, Quaternion.identity);
+    { 
+        int towerCost = towerCosts[ImageIndex];
+
+        // 현재 돈을 가져오는 로직 (MoneyManager에 있는 Money 변수를 활용)
+        int currentMoney = MoneyManager.Instance.Money;
+
+        // 충분한 돈이 있는지 확인
+        if (currentMoney >= towerCost)
+        {
+            // 충분한 돈이 있다면 타워 설치 가능
+            Instantiate<GameObject>(Tower[ImageIndex], TowerSlot.position, Quaternion.identity);
+
+            // 타워 비용만큼 돈 차감
+            MoneyManager.Instance.SpendMoney(towerCost);
+        }
+        else
+        {
+            Debug.Log("돈이 부족해요");
+        }
+        //Instantiate<GameObject>(Tower[ImageIndex], TowerSlot.position, Quaternion.identity);
     }
 
     private void OnButtonClick(int index)
@@ -67,4 +88,5 @@ public class ShopUI : MonoBehaviour
                 break;
         }
     }
+
 }

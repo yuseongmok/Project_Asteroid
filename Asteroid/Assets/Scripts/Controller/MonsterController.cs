@@ -8,11 +8,12 @@ public class MonsterController : MonoBehaviour
     public float moveSpeed = 5.0f; // 몬스터 이동 속도
     public int maxHealth = 50; // 최대 체력
     private int currentHealth; // 현재 체력
-    public int damage = 10;
-
+    public int damage;
+    public PlayerHealth player;
     void Start()
     {
         currentHealth = maxHealth; // 시작할 때 현재 체력을 최대 체력으로 설정
+        player = GameObject.Find("PlayerBody").GetComponent<PlayerHealth>();
     }
     void Update()
     {
@@ -22,9 +23,9 @@ public class MonsterController : MonoBehaviour
     }
 
     // 적 캐릭터에게 데미지를 입히는 함수
-    public void TakeDamage(int damageAmount)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= damageAmount; // 데미지만큼 현재 체력 감소
+        currentHealth -= damage; // 데미지만큼 현재 체력 감소
         Debug.Log("적이 공격을 맞음");
         if (currentHealth <= 0)
         {
@@ -36,6 +37,8 @@ public class MonsterController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            player.TakeDamage1(damage);
+            //TakeDamage(player.TakeDamage(damage));
             Destroy(gameObject);
         }
     }
@@ -44,7 +47,7 @@ public class MonsterController : MonoBehaviour
     {
         if (gameObject.CompareTag("Money"))
         {
-            MoneyManager.Instance.AddMoney(25);
+            MoneyManager.Instance.AddMoney(100);
             Debug.Log("돈 운석 파괴됨");
         }
             // 여기에 적 캐릭터가 사망할 때 수행할 작업을 추가할 수 있습니다.

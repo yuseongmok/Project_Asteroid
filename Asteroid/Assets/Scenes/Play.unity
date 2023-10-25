@@ -707,8 +707,8 @@ MonoBehaviour:
   waveText: {fileID: 697148918}
   enemyPrefabs:
   - {fileID: 5859394722337139915, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
-  - {fileID: 5859394722337139915, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
-  - {fileID: 5859394722337139915, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
+  - {fileID: 4284040251896396860, guid: 276cf57c64f746e46b11c617441aa652, type: 3}
+  - {fileID: 4284040251896396860, guid: 276cf57c64f746e46b11c617441aa652, type: 3}
   spawnPoint: {fileID: 2048010151}
   imageToControl: {fileID: 81590402}
   Enemy: {fileID: 0}
@@ -721,6 +721,7 @@ MonoBehaviour:
   timer: 0
   soundManager: {fileID: 587843271}
   UITowerButtonGroup: {fileID: 722312587}
+  ShopUI: {fileID: 1640788676}
 --- !u!1 &420528888
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,7 +1376,7 @@ RectTransform:
   m_GameObject: {fileID: 742247429}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34044394, y: 0.6507537, z: 0.74371}
+  m_LocalScale: {x: 0.3404439, y: 0.6507536, z: 0.74371}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 81590399}
@@ -1384,7 +1385,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 570, y: -458}
+  m_AnchoredPosition: {x: 569.99976, y: -457.99997}
   m_SizeDelta: {x: 400, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742247431
@@ -3547,6 +3548,7 @@ MonoBehaviour:
   - {fileID: 942404344750769535, guid: 261dfbc88adc0ec48b3e65c3809638d4, type: 3}
   - {fileID: 942404344750769535, guid: 3fbf3134eab1733458fc73a8eeb594b4, type: 3}
   TowerSlot: {fileID: 106141512}
+  towerCosts: 6400000096000000
 --- !u!4 &1682994311 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2228087484671142555, guid: 7a44a2bb44220284b8a6edea1d861ede, type: 3}
@@ -4380,7 +4382,7 @@ MonoBehaviour:
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
-  m_WholeNumbers: 0
+  m_WholeNumbers: 1
   m_Value: 100
   m_OnValueChanged:
     m_PersistentCalls:
