@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4854491256632088262}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.61109, y: 0.6416445, z: 0.61109}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1090623895384806830}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a26638d6d0715144c9aa084a65d50e08, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cd277adc05d4934680043368405f233, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,9 +94,8 @@ Animation:
   m_GameObject: {fileID: 4854491256632088262}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
+  m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -115,8 +114,8 @@ GameObject:
   - component: {fileID: -5386562005787000268}
   - component: {fileID: -307703495565171966}
   m_Layer: 0
-  m_Name: Money_Enemy
-  m_TagString: Money
+  m_Name: Enemy 2
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -178,7 +177,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: a0026bf22aa0620418fbae52522135b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9cd277adc05d4934680043368405f233, type: 3}
   m_Color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -238,6 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e7edc289b2efbe41bb21f5710946e8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 2.3
-  maxHealth: 120
-  damage: 0
+  moveSpeed: 2.5
+  maxHealth: 150
+  damage: 15

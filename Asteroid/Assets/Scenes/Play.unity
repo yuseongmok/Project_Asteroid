@@ -706,9 +706,9 @@ MonoBehaviour:
   waveButton: {fileID: 742247431}
   waveText: {fileID: 697148918}
   enemyPrefabs:
-  - {fileID: 5859394722337139915, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
-  - {fileID: 5859394722337139915, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
-  - {fileID: 5859394722337139915, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
+  - {fileID: 6736847575485580748, guid: 2cac9498946b10749afe950aaf36a3c8, type: 3}
+  - {fileID: 8923083181819892340, guid: af8e471e2d2af3741a19ebe376ece72b, type: 3}
+  - {fileID: 4072452734878221310, guid: 2ea007f72b8a25742a9ccbda30f5922c, type: 3}
   spawnPoint: {fileID: 2048010151}
   imageToControl: {fileID: 81590402}
   Enemy: {fileID: 0}
