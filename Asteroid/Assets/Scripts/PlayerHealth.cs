@@ -11,10 +11,15 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth; // 현재 체력
 
     public Slider healthBar; // HP 바 UI
+    public GameObject Panal;
     MonsterController Enemy;
-    
+
+    // 데미지 표시 시간
+    private float damageDisplayTime = 0.2f;
+
     private void Start()
     {
+        Panal.SetActive(false);
         currentHealth = maxHealth;
         healthBar.maxValue = maxHealth;
         healthBar.value = currentHealth;
@@ -36,17 +41,21 @@ public class PlayerHealth : MonoBehaviour
     public void TakeDamage1(int damage)
     {
         currentHealth -= damage;
+        StartCoroutine(DisplayDamagePanal()); // 데미지 패널을 표시하는 코루틴 시작
+
         healthBar.value = currentHealth;
 
         if (currentHealth == 0)
         {
-           
-            Die();
+            SceneManager.LoadScene("Play");
         }
     }
 
-    private void Die()
+    // 데미지 패널을 표시하는 코루틴
+    private IEnumerator DisplayDamagePanal()
     {
-        
+        Panal.SetActive(true);
+        yield return new WaitForSeconds(damageDisplayTime);
+        Panal.SetActive(false);
     }
 }

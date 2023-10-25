@@ -6,7 +6,7 @@ using TMPro;
 
 public class ShopUI : MonoBehaviour
 {
-    public List<Button> buttons; // Button을 저장할 List 변수
+    public List<Button> buttons;
     public Sprite[] images;
     public Image targetImage;
     public int ImageIndex = 0;
@@ -15,15 +15,20 @@ public class ShopUI : MonoBehaviour
     public TextMeshProUGUI TowerPower;
     public TextMeshProUGUI TowerSpeed;
     public TextMeshProUGUI TowerExplanation;
+    public TextMeshProUGUI RailgunMoney;
+    public TextMeshProUGUI ShootgunMoney;
     public Button tower;
     public List<GameObject> Tower;
-    public Transform TowerSlot;
-
+    public List<Transform> TowerSlots; // Change the variable to a list of Transform
+    public List<bool> IsSlotOccupied; // To keep track of whether a tower is installed in each slot
     public List<int> towerCosts;
 
     void Start()
     {
-        // 모든 Button에 클릭 이벤트를 연결
+        // Initialize the IsSlotOccupied list
+        IsSlotOccupied = new List<bool>(new bool[TowerSlots.Count]);
+
+        // Attach click events to the buttons
         foreach (Button btn in buttons)
         {
             btn.onClick.AddListener(() => OnButtonClick(buttons.IndexOf(btn)));
@@ -31,28 +36,47 @@ public class ShopUI : MonoBehaviour
         tower.onClick.AddListener(TowerInstantiate);
     }
 
-    //상점 구매하기 버튼 누르면 실행하는 함수
     private void TowerInstantiate()
-    { 
+    {
         int towerCost = towerCosts[ImageIndex];
 
-        // 현재 돈을 가져오는 로직 (MoneyManager에 있는 Money 변수를 활용)
         int currentMoney = MoneyManager.Instance.Money;
 
-        // 충분한 돈이 있는지 확인
         if (currentMoney >= towerCost)
         {
-            // 충분한 돈이 있다면 타워 설치 가능
-            Instantiate<GameObject>(Tower[ImageIndex], TowerSlot.position, Quaternion.identity);
+            // Find the first available slot
+            int slotIndex = FindEmptySlot();
 
-            // 타워 비용만큼 돈 차감
-            MoneyManager.Instance.SpendMoney(towerCost);
+            if (slotIndex != -1)
+            {
+                // Instantiate the tower at the selected slot
+                Instantiate(Tower[ImageIndex], TowerSlots[slotIndex].position, Quaternion.identity);
+                IsSlotOccupied[slotIndex] = true;
+
+                // Deduct the tower cost from the money
+                MoneyManager.Instance.SpendMoney(towerCost);
+            }
+            else
+            {
+                Debug.Log("타워 슬롯이 없어요");
+            }
         }
         else
         {
             Debug.Log("돈이 부족해요");
         }
-        //Instantiate<GameObject>(Tower[ImageIndex], TowerSlot.position, Quaternion.identity);
+    }
+
+    private int FindEmptySlot()
+    {
+        for (int i = 0; i < IsSlotOccupied.Count; i++)
+        {
+            if (!IsSlotOccupied[i])
+            {
+                return i;
+            }
+        }
+        return -1; // No available slot
     }
 
     private void OnButtonClick(int index)
@@ -76,17 +100,9 @@ public class ShopUI : MonoBehaviour
                 TowerExplanation.text = "두 발씩 발사하는 타워이다";
                 break;
 
-            case 2:
-                TowerName.text = "기획몰라 타워";
-                TowerPower.text = "공격력 10";
-                TowerSpeed.text = "빠름";
-                TowerExplanation.text = "아직 기획이 안된 타워이다";
-                break;
-
             default:
-                
+
                 break;
         }
     }
-
 }

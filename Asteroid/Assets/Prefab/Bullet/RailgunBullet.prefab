@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8229866084881649988}
   - component: {fileID: -7246513056139028666}
   m_Layer: 0
-  m_Name: TowerBullet
+  m_Name: RailgunBullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

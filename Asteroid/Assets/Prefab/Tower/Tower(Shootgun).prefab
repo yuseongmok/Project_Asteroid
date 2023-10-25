@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 942404344750769531}
   - component: {fileID: 942404344750769530}
   - component: {fileID: 942404344750769533}
-  - component: {fileID: 942404344750769528}
+  - component: {fileID: 6792585954800217509}
   - component: {fileID: 942404344750769532}
   m_Layer: 0
-  m_Name: Tower(Railgun)
+  m_Name: Tower(Shootgun)
   m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,7 +86,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &942404344750769528
+--- !u!114 &6792585954800217509
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,14 +95,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 942404344750769535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b01778e3a84241b4ea5ef5e00928c3d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 39c376c1390f31c4eb43ab0eba6e580d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
   gunTransform: {fileID: 942404345656856857}
-  bulletPrefab: {fileID: 3121810964294527954, guid: 8cd7e2aa7c916fd4dbb53f108305d09e, type: 3}
+  bulletPrefab: {fileID: 3121810964294527954, guid: 15e080cfa7846e242a17341b5c69a901, type: 3}
   range: 9
-  fireRate: 0.91
+  fireRate: 0.5
 --- !u!65 &942404344750769532
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4cbd62cdd98960343953f5fb9eff1e4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8100fc24bf7c27244bb5ee94cd708b48, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -305,8 +305,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: d511f571421c07e418453882705f482b, type: 3}
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: eaa4698d664503a4ba103bca7f116d0c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -333,7 +333,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5900739017493652153
 Transform:
   m_ObjectHideFlags: 0
@@ -390,7 +390,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fdd1b0c899fb3dc4d85710c4de925310, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 573e3357932e6b54e80791dc015eaf34, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
