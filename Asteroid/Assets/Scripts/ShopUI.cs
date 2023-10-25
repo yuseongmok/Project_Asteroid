@@ -64,14 +64,14 @@ public class ShopUI : MonoBehaviour
         {
             case 0:
                 TowerName.text = "레이저 타워";
-                TowerPower.text = "공격력 20";
+                TowerPower.text = "공격력 100";
                 TowerSpeed.text = "보통";
                 TowerExplanation.text = "기본적인 타워이다";
                 break;
 
             case 1:
                 TowerName.text = "샷건 타워";
-                TowerPower.text = "공격력 40";
+                TowerPower.text = "공격력 200";
                 TowerSpeed.text = "느림";
                 TowerExplanation.text = "두 발씩 발사하는 타워이다";
                 break;

@@ -42,6 +42,8 @@ public class WaveSystem : MonoBehaviour
         waveButton.onClick.AddListener(StartWave);  // 버튼 클릭 이벤트 리스너 추가
         UpdateWaveText();  // 초기 Wave 번호 표시
         soundManager.PlaySound(0);
+        MoneyManager.Instance.AddMoney(50);
+
     }
 
     private void UpdateWaveText()
@@ -63,7 +65,7 @@ public class WaveSystem : MonoBehaviour
         if (isWaveInProgress)
         {
             //Wave
-
+            
             // Wave 진행 중에는 버튼을 비활성화
             waveButton.interactable = false;
 

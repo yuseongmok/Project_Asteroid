@@ -13,6 +13,7 @@ public class MoneyManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI moneyText; // Money 수치를 표시할 UI Text
 
+    
     private void Awake()
     {
         if (Instance == null)
@@ -25,6 +26,8 @@ public class MoneyManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    
 
     private void UpdateMoneyText()
     {
