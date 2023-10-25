@@ -174,7 +174,7 @@ public class WaveSystem : MonoBehaviour
 
     void Shoot()
     {
-        if(timer >= 1.5f)
+        if(timer >= 0.33f)
         {
             // 총알을 발사 위치에서 생성
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
