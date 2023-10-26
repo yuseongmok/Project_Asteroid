@@ -101,7 +101,7 @@ MonoBehaviour:
   target: {fileID: 0}
   gunTransform: {fileID: 942404345656856857}
   bulletPrefab: {fileID: 3121810964294527954, guid: 15e080cfa7846e242a17341b5c69a901, type: 3}
-  range: 9
+  range: 5
   fireRate: 0.5
 --- !u!65 &942404344750769532
 BoxCollider:

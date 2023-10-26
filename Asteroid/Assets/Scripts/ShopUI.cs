@@ -87,17 +87,17 @@ public class ShopUI : MonoBehaviour
         switch (ImageIndex)
         {
             case 0:
-                TowerName.text = "레이저 타워";
+                TowerName.text = "레일건";
                 TowerPower.text = "공격력 100";
                 TowerSpeed.text = "보통";
-                TowerExplanation.text = "기본적인 타워이다";
+                TowerExplanation.text = "공격력이 강한 레이저를 발사";
                 break;
 
             case 1:
-                TowerName.text = "샷건 타워";
+                TowerName.text = "더블배럴";
                 TowerPower.text = "공격력 200";
                 TowerSpeed.text = "느림";
-                TowerExplanation.text = "두 발씩 발사하는 타워이다";
+                TowerExplanation.text = "두발의 발사체를 발사";
                 break;
 
             default:

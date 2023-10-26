@@ -94,8 +94,9 @@ Animation:
   m_GameObject: {fileID: 1898083481503623868}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -240,6 +241,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 120
   damage: 0
+  player: {fileID: 0}
 --- !u!1 &3310186917993373603
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +382,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 120
   damage: 0
+  player: {fileID: 0}
 --- !u!1 &3677946056520968379
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +523,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
 --- !u!1 &4101964178032500310
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,8 +618,9 @@ Animation:
   m_GameObject: {fileID: 4101964178032500310}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -760,6 +765,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
 --- !u!1 &4789471640190628881
 GameObject:
   m_ObjectHideFlags: 0
@@ -900,6 +906,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
 --- !u!1 &5202813128145695775
 GameObject:
   m_ObjectHideFlags: 0
@@ -994,8 +1001,9 @@ Animation:
   m_GameObject: {fileID: 5202813128145695775}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1094,8 +1102,9 @@ Animation:
   m_GameObject: {fileID: 5646831615568259383}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1240,6 +1249,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
 --- !u!1 &6566660481340805743
 GameObject:
   m_ObjectHideFlags: 0
@@ -1481,6 +1491,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
 --- !u!1 &6736847575485580748
 GameObject:
   m_ObjectHideFlags: 0
@@ -1715,8 +1726,9 @@ Animation:
   m_GameObject: {fileID: 8005236661349103893}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
@@ -1861,6 +1873,7 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
 --- !u!1 &8682565522563557545
 GameObject:
   m_ObjectHideFlags: 0
@@ -1955,8 +1968,9 @@ Animation:
   m_GameObject: {fileID: 8682565522563557545}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
+  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
