@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4369843478073703422}
   - component: {fileID: 725879831002486440}
-  - component: {fileID: 6797044959739021407}
+  - component: {fileID: 1252415591817161310}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -85,22 +85,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &6797044959739021407
-Animation:
+--- !u!114 &1252415591817161310
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1898083481503623868}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 80
 --- !u!1 &2490914909130334314
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,7 +531,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4521449123230976532}
   - component: {fileID: 5496435933004498732}
-  - component: {fileID: 5784777815624542064}
+  - component: {fileID: 2793309391453925753}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -609,22 +606,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &5784777815624542064
-Animation:
+--- !u!114 &2793309391453925753
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4101964178032500310}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 60
 --- !u!1 &4656235952284813895
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,7 +911,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8285534864139906792}
   - component: {fileID: 515471005784945361}
-  - component: {fileID: 2066173107701015341}
+  - component: {fileID: 8763578182444942032}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -992,22 +986,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &2066173107701015341
-Animation:
+--- !u!114 &8763578182444942032
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5202813128145695775}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 60
 --- !u!1 &5646831615568259383
 GameObject:
   m_ObjectHideFlags: 0
@@ -1018,7 +1009,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8421975180248947167}
   - component: {fileID: 3387047663808908449}
-  - component: {fileID: 6077954139690105763}
+  - component: {fileID: 7293349283495382830}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -1093,22 +1084,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &6077954139690105763
-Animation:
+--- !u!114 &7293349283495382830
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5646831615568259383}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 50
 --- !u!1 &6331874588025493693
 GameObject:
   m_ObjectHideFlags: 0
@@ -1260,7 +1248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2631556836195852704}
   - component: {fileID: 3130791304152074353}
-  - component: {fileID: 8107262076996747574}
+  - component: {fileID: 5919646362551926678}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -1335,22 +1323,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &8107262076996747574
-Animation:
+--- !u!114 &5919646362551926678
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6566660481340805743}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 60
 --- !u!1 &6612145199177269514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1541,7 +1526,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5197656768634184401}
   - component: {fileID: 2350036262054193699}
-  - component: {fileID: 5164231088939738142}
+  - component: {fileID: 6700377514166820586}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -1616,22 +1601,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &5164231088939738142
-Animation:
+--- !u!114 &6700377514166820586
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7756524537395926514}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 90
 --- !u!1 &8005236661349103893
 GameObject:
   m_ObjectHideFlags: 0
@@ -1642,7 +1624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2597390188254874230}
   - component: {fileID: 8589256823276915056}
-  - component: {fileID: 6246549089750586391}
+  - component: {fileID: 7726858782599826857}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -1717,22 +1699,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &6246549089750586391
-Animation:
+--- !u!114 &7726858782599826857
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8005236661349103893}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 80
 --- !u!1 &8586691889601541596
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,7 +1863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1072994567079100141}
   - component: {fileID: 4397025875237292437}
-  - component: {fileID: 2279982013822554496}
+  - component: {fileID: 839534292607724045}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -1959,19 +1938,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &2279982013822554496
-Animation:
+--- !u!114 &839534292607724045
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8682565522563557545}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 10236de66332c7242b34a83a58d76371, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1df5ccfc02e1fb54d92de8c37c1534fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 70

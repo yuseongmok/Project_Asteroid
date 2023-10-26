@@ -47,7 +47,7 @@ public class MonsterController : MonoBehaviour
     {
         if (gameObject.CompareTag("Money"))
         {
-            MoneyManager.Instance.AddMoney(25);
+            MoneyManager.Instance.AddMoney(1000);
             Debug.Log("돈 운석 파괴됨");
         }
             // 여기에 적 캐릭터가 사망할 때 수행할 작업을 추가할 수 있습니다.

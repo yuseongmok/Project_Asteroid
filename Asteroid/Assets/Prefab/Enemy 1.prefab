@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4690615523611382360}
   - component: {fileID: 5319795234011772878}
-  - component: {fileID: 3222189433137675029}
+  - component: {fileID: 7795827246134990173}
   m_Layer: 0
   m_Name: METEOR
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1090623895384806830}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 206.91002}
 --- !u!212 &5319795234011772878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -85,21 +85,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!111 &3222189433137675029
-Animation:
+--- !u!114 &7795827246134990173
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4854491256632088262}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: b27c32ca57693e241b3202c34d8f358c, type: 2}
-  m_Animations: []
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc6938afff2cb2b4bbc13e2f43140a7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rotationSpeed: 20
+  moveSpeed: 1
+  amplitude: 1
 --- !u!1 &7547512814342186316
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,3 +240,4 @@ MonoBehaviour:
   moveSpeed: 2.3
   maxHealth: 100
   damage: 10
+  player: {fileID: 0}
