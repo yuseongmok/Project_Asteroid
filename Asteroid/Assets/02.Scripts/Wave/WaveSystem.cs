@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class WaveSystem : MonoBehaviour
 {
@@ -119,7 +120,10 @@ public class WaveSystem : MonoBehaviour
             Enemy = enemy;
             currentEnemyIndex++;
             soundManager.StopSound(0);
-            
+            if(currentEnemyIndex == 5)
+            {
+                EndScene();
+            }
         }
         else
         {
@@ -186,6 +190,10 @@ public class WaveSystem : MonoBehaviour
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             timer = 0.0f;
         }
+    }
+    public void EndScene()
+    {
+        SceneManager.LoadScene("Stage");
     }
 }
 
