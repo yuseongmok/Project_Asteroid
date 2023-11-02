@@ -4,15 +4,18 @@ using System.Collections;
 public class FadeInAndOut : MonoBehaviour
 {
     public float fadeDuration = 2.0f; // 나타나고 사라지는 데 걸리는 시간
-
+    public GameObject Oj;
     private CanvasRenderer canvasRenderer;
+    
+    
 
-    void Start()
+    void OnEnable()
     {
         canvasRenderer = GetComponent<CanvasRenderer>();
         StartCoroutine(FadeInOut());
     }
 
+    
     IEnumerator FadeInOut()
     {
         while (true)
@@ -32,4 +35,11 @@ public class FadeInAndOut : MonoBehaviour
             }
         }
     }
+
+    private void OnDisable()
+    {
+        StopCoroutine(FadeInOut());
+    }
+
+
 }
