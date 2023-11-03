@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using UnityEditor.Build.Content;
 
 public class FadeInAndOut : MonoBehaviour
 {
@@ -7,12 +8,13 @@ public class FadeInAndOut : MonoBehaviour
     public GameObject Oj;
     private CanvasRenderer canvasRenderer;
     
-    
+   
 
     void OnEnable()
     {
         canvasRenderer = GetComponent<CanvasRenderer>();
         StartCoroutine(FadeInOut());
+        Oj.SetActive(false);
     }
 
     

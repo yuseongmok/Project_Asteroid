@@ -90,11 +90,16 @@ public class DialogueManager : MonoBehaviour
 
     void ChangeImage()
     {
-        if (ImageIndex == 2)
+        if (ImageIndex == 2 || ImageIndex == 8)
         {
             Debug.Log("¿Œµ•Ω∫ 2∞° µ ");
 
             targetImage.sprite = images[1];
+        }
+
+        if(ImageIndex == 5)
+        {
+            targetImage.sprite = images[0];
         }
     }
 
