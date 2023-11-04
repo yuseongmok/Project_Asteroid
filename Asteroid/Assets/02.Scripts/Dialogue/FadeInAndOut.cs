@@ -5,7 +5,7 @@ using UnityEditor.Build.Content;
 public class FadeInAndOut : MonoBehaviour
 {
     public float fadeDuration = 2.0f; // 나타나고 사라지는 데 걸리는 시간
-    public GameObject Oj;
+    
     private CanvasRenderer canvasRenderer;
     
    
@@ -14,7 +14,7 @@ public class FadeInAndOut : MonoBehaviour
     {
         canvasRenderer = GetComponent<CanvasRenderer>();
         StartCoroutine(FadeInOut());
-        Oj.SetActive(false);
+        
     }
 
     

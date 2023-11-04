@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -16,9 +17,10 @@ public class DialogueManager : MonoBehaviour
     public Image targetImage;
     public int ImageIndex = 0;
 
-    
+    public GameObject warring;
+    //사운드 매니저
+    public SoundManager soundManager;
 
-   
 
     private void Start()
     {
@@ -26,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         isTyping = false;
         dialogueText.text = "";
         Ob.SetActive(false);
+        warring.SetActive(false);
     }
 
     private void Update()
@@ -90,6 +93,7 @@ public class DialogueManager : MonoBehaviour
 
     void ChangeImage()
     {
+        // 이미지 체인지
         if (ImageIndex == 2 || ImageIndex == 8)
         {
             Debug.Log("인데스 2가 됨");
@@ -97,10 +101,19 @@ public class DialogueManager : MonoBehaviour
             targetImage.sprite = images[1];
         }
 
-        if(ImageIndex == 5)
+        
+        // warring 이미지와 사운드 나오는 구간
+        if (ImageIndex == 5)
         {
+            soundManager.PlaySound(0);
+            warring.SetActive(true);
             targetImage.sprite = images[0];
         }
+
+       if(ImageIndex == 11)
+       {
+            LoadingScene.LoadScene("Play");
+       }
     }
 
     void CompleteTyping()

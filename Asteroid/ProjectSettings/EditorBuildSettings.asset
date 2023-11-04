@@ -15,15 +15,6 @@ EditorBuildSettings:
     path: Assets/01.Scenes/Loading.unity
     guid: c87f90eb9260e1749a25693828239dd9
   - enabled: 1
-    path: Assets/01.Scenes/Chapter1_StoryScenes/Story01.unity
-    guid: 59ea573869b2b454a99c8717540f279b
-  - enabled: 1
-    path: Assets/01.Scenes/Chapter1_StoryScenes/Story02.unity
-    guid: e5595a3d8181ea64c93a00cdb382a671
-  - enabled: 1
-    path: Assets/01.Scenes/Chapter1_StoryScenes/Story03.unity
-    guid: c395d05aa5c09f0418e25f7fcc1fa870
-  - enabled: 1
     path: Assets/01.Scenes/Chapter1_StoryScenes/Story04.unity
     guid: 243283270f6cc1c4195b24d88e9cfe6e
   - enabled: 1

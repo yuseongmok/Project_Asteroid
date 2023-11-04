@@ -8,6 +8,6 @@ public class PlayScenes : MonoBehaviour
 
     public void LoadNextScene()
     {
-        LoadingScene.LoadScene("Story01");
+        LoadingScene.LoadScene("Story04");
     }
 }
