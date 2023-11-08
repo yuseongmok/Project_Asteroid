@@ -24,6 +24,8 @@ public class MoneyManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        
     }
 
     

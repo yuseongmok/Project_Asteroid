@@ -16,10 +16,13 @@ EditorBuildSettings:
     guid: c87f90eb9260e1749a25693828239dd9
   - enabled: 1
     path: Assets/01.Scenes/Chapter1_StoryScenes/Story01.unity
-    guid: 243283270f6cc1c4195b24d88e9cfe6e
+    guid: 59ea573869b2b454a99c8717540f279b
   - enabled: 1
     path: Assets/01.Scenes/Play.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/01.Scenes/Play_2.unity
+    guid: 993f67373144cd04a9aadf5abe89caab
   - enabled: 1
     path: Assets/01.Scenes/Chapter1_StoryScenes/Story02.unity
     guid: fab6f525b71530c42815d68d0e1fea86

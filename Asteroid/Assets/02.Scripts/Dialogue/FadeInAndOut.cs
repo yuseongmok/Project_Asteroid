@@ -1,6 +1,6 @@
 using UnityEngine;
 using System.Collections;
-using UnityEditor.Build.Content;
+
 
 public class FadeInAndOut : MonoBehaviour
 {
