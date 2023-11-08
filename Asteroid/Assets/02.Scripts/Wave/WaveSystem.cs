@@ -193,7 +193,7 @@ public class WaveSystem : MonoBehaviour
     }
     public void EndScene()
     {
-        SceneManager.LoadScene("Stage");
+        SceneManager.LoadScene("Story02");
     }
 }
 
