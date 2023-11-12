@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -8229866084881649988}
   - component: {fileID: -7246513056139028666}
   - component: {fileID: -9109535991772226195}
-  - component: {fileID: 3986068735658291684}
+  - component: {fileID: 702956543883576326}
   m_Layer: 0
   m_Name: ShootgunBullet
   m_TagString: Bullet
@@ -156,8 +156,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSources:
-  - {fileID: 3986068735658291684}
---- !u!82 &3986068735658291684
+  - {fileID: 702956543883576326}
+--- !u!82 &702956543883576326
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -168,7 +168,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 86f4f85cd3970944f812dd9944132d6c, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

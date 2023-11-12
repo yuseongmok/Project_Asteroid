@@ -8,7 +8,8 @@ public class SlotUI : MonoBehaviour
 {
     public List<Button> buttonList; // Button을 저장할 List 변수
     public GameObject uiPanel; // 활성화할 UI 창
-    
+    public SoundManager soundManager;
+
     private void Start()
     {
         // Button들을 List에 추가
@@ -27,7 +28,7 @@ public class SlotUI : MonoBehaviour
     // UI 패널을 활성화/비활성화하는 함수
     void ToggleUIPanel()
     {
-        
         uiPanel.SetActive(!uiPanel.activeSelf);
+        soundManager.PlaySound(0);
     }
 }
