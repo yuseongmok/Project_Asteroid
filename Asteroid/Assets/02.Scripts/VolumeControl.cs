@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System;
 
 public class VolumeControl : MonoBehaviour
 {
     public Slider volumeSlider; // Inspector에서 할당할 Slider UI 요소
     public List<AudioSource> audioSources; // Inspector에서 할당할 AudioSource 리스트
+    public Sprite[] images;
+    public Image targetImage;
 
     void Start()
     {
@@ -31,6 +34,16 @@ public class VolumeControl : MonoBehaviour
             if (audioSource != null)
             {
                 audioSource.volume = volume;
+
+                // 볼륨이 0이면 타겟 이미지 변경
+                if (volume == 0 && targetImage.depth > 1)
+                {
+                    targetImage.sprite = images[1];
+                }
+                else if (volume > 0 && targetImage.depth > 0)
+                {
+                    targetImage.sprite = images[0];
+                }
             }
         }
     }
