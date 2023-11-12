@@ -8,6 +8,6 @@ public class StageScenes : MonoBehaviour
 
     public void LoadNextScene()
     {
-        LoadingScene.LoadScene("Stage");
+        LoadingScene.LoadScene("Stage_1");
     }
 }
