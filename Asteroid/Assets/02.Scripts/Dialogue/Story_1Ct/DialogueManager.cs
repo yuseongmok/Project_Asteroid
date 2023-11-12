@@ -96,8 +96,6 @@ public class DialogueManager : MonoBehaviour
         // 이미지 체인지
         if (ImageIndex == 2 || ImageIndex == 8)
         {
-            Debug.Log("인데스 2가 됨");
-
             targetImage.sprite = images[1];
         }
 
