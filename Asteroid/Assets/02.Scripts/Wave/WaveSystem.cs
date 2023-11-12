@@ -27,6 +27,8 @@ public class WaveSystem : MonoBehaviour
     public float minAngle = -45.0f;       // 최소 회전 각도
     public float maxAngle = 45.0f;        // 최대 회전 각도
     public float timer = 0.0f;
+    private bool TowerOnOff = true;
+    public Button ToswerOn;
 
     //사운드 매니저
     public SoundManager soundManager;
@@ -35,18 +37,17 @@ public class WaveSystem : MonoBehaviour
     public GameObject UITowerButtonGroup;
     public GameObject ShopUI;
 
-
-    
     private void Start()
     {
         //Wave 코드
         waveButton.onClick.AddListener(StartWave);  // 버튼 클릭 이벤트 리스너 추가
+        ToswerOn.onClick.AddListener(TowerOn);
         UpdateWaveText();  // 초기 Wave 번호 표시
         soundManager.PlaySound(0);
         MoneyManager.Instance.AddMoney(50);
 
     }
-
+    // Wave Text 
     private void UpdateWaveText()
     {
         //Wave 코드
@@ -93,14 +94,30 @@ public class WaveSystem : MonoBehaviour
             {
                 Shoot();
             }
-
-
         }
         else
         {
             // Wave가 종료되면 버튼을 활성화
             waveButton.interactable = true;
         }
+
+        // Esc키 누르면 Player 공격 활성화,비활성화
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(TowerOnOff)
+            {
+                TowerOnOff = false;
+            }
+            else
+            {
+                TowerOnOff = true;
+            }
+        }
+    }
+
+    public void TowerOn()
+    {
+        TowerOnOff = true;
     }
 
     // Wave를 시작하는 함수
@@ -113,6 +130,7 @@ public class WaveSystem : MonoBehaviour
         ShopUI.SetActive(false); //ShopUi 창 비활성화
         soundManager.PlaySound(3);
         soundManager.PlaySound(1);
+
         if (currentEnemyIndex < enemyPrefabs.Count)
         {
             // 순서대로 Enemy 프리팹을 선택하여 생성
@@ -131,14 +149,8 @@ public class WaveSystem : MonoBehaviour
         }
         currentWave++;  // Wave 번호 증가
         UpdateWaveText();  // Wave 번호 업데이트
-        
-
-
-
         HideImage();
     }
-
-    
 
     // Wave가 완료되었는지 확인하는 함수
     private bool CheckWaveComplete()
@@ -148,6 +160,7 @@ public class WaveSystem : MonoBehaviour
         
 
     }
+
     //웨이브 버튼 이미지를 숨김
     private void HideImage()
     {
@@ -156,6 +169,7 @@ public class WaveSystem : MonoBehaviour
             imageToControl.enabled = false;
         }
     }
+
     //웨이브 버튼 이미지 다시 보이기
     private void ShowImage()
     {
@@ -166,7 +180,6 @@ public class WaveSystem : MonoBehaviour
     }
 
     //Player(메인주포 코드)
-
     void RotatePivotToMouse()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -181,16 +194,22 @@ public class WaveSystem : MonoBehaviour
         pivot.rotation = Quaternion.Slerp(pivot.rotation, targetRotation, rotationSpeed * Time.deltaTime);
     }
 
+    // Player 공격 함수
     void Shoot()
     {
-        if(timer >= 0.33f)
+        if(TowerOnOff == true)
         {
-            soundManager.PlaySound(4);
-            // 총알을 발사 위치에서 생성
-            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            timer = 0.0f;
+            if (timer >= 0.33f)
+            {
+                soundManager.PlaySound(4);
+                // 총알을 발사 위치에서 생성
+                Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+                timer = 0.0f;
+            }
         }
+       
     }
+
     public void EndScene()
     {
         SceneManager.LoadScene("Story02");

@@ -1616,6 +1616,7 @@ MonoBehaviour:
   minAngle: -45
   maxAngle: 45
   timer: 0
+  ToswerOn: {fileID: 2049711935}
   soundManager: {fileID: 587843271}
   UITowerButtonGroup: {fileID: 722312587}
   ShopUI: {fileID: 1640788676}
@@ -9326,7 +9327,7 @@ GameObject:
   - component: {fileID: 1963940722}
   - component: {fileID: 1963940721}
   m_Layer: 0
-  m_Name: MenManager
+  m_Name: MenuManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
