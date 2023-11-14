@@ -23,6 +23,9 @@ public class ShopUI : MonoBehaviour
     public List<Transform> TowerSlots; // Change the variable to a list of Transform
     public List<bool> IsSlotOccupied; // To keep track of whether a tower is installed in each slot
     public List<int> towerCosts;
+
+    public Button ShopUIX;
+    public GameObject ShopUI_1;
     //사운드 매니저
     public SoundManager soundManager;
     void Start()
@@ -37,6 +40,7 @@ public class ShopUI : MonoBehaviour
             btn.onClick.AddListener(() => OnButtonClick(buttons.IndexOf(btn)));
         }
         tower.onClick.AddListener(TowerInstantiate);
+        ShopUIX.onClick.AddListener(UIX);
     }
 
     
@@ -122,5 +126,11 @@ public class ShopUI : MonoBehaviour
         NoMoney.enabled = true;
         yield return new WaitForSeconds(0.8f); // 필요에 따라 지속 시간을 조절할 수 있습니다.
         NoMoney.enabled = false;
+    }
+
+    public void UIX()
+    {
+        ShopUI_1.SetActive(false);
+        soundManager.PlaySound(0);
     }
 }
