@@ -21,6 +21,7 @@ public class DialogueManager : MonoBehaviour
     //사운드 매니저
     public SoundManager soundManager;
 
+    public Button SkipButton;
 
     private void Start()
     {
@@ -29,6 +30,7 @@ public class DialogueManager : MonoBehaviour
         dialogueText.text = "";
         Ob.SetActive(false);
         warring.SetActive(false);
+        SkipButton.onClick.AddListener(Skip);
     }
 
     private void Update()
@@ -50,6 +52,11 @@ public class DialogueManager : MonoBehaviour
         }
 
 
+    }
+
+    public void Skip()
+    {
+        SceneManager.LoadScene("Play");
     }
 
     void ShowNextDialogue()

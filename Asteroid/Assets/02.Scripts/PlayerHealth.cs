@@ -48,7 +48,7 @@ public class PlayerHealth : MonoBehaviour
 
         if (currentHealth == 0)
         {
-            SceneManager.LoadScene("Play");
+            SceneManager.LoadScene("Stage");
         }
     }
 
