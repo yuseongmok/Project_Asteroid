@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Turret
   - Money
+  - Bullet_Slow
   layers:
   - Default
   - TransparentFX
