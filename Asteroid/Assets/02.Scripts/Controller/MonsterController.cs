@@ -49,9 +49,9 @@ public class MonsterController : MonoBehaviour
         soundManager.PlaySound(0);
         currentHealth -= damage; // 데미지만큼 현재 체력 감소
         Debug.Log("적이 공격을 맞음");
+
         if (currentHealth <= 0)
         {
-            
             Die(); // 체력이 0 이하로 떨어지면 사망 처리
         }
     }
@@ -60,7 +60,6 @@ public class MonsterController : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            
             player.TakeDamage1(damage);
             //TakeDamage(player.TakeDamage(damage));
             Destroy(gameObject);

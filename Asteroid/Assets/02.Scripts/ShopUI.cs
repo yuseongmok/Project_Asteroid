@@ -44,7 +44,6 @@ public class ShopUI : MonoBehaviour
     }
 
     
-
     private void TowerInstantiate()
     {
         soundManager.PlaySound(0);

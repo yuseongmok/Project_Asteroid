@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : MonoBehaviour
+public class Tower3 : MonoBehaviour
 {
     public Transform target; // Enemy 타겟
     public Transform gunTransform; // 총알 발사 위치
@@ -15,6 +15,25 @@ public class Tower : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.1f); // 주기적으로 타겟 업데이트
+    }
+
+    // 추가된 부분: 0.2초 간격으로 5번 발사하는 메서드
+    void ShootMultipleBullets()
+    {
+        if (target != null)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                StartCoroutine(ShootWithDelay(i * 0.2f));
+            }
+        }
+    }
+
+    // 추가된 부분: 지연 시간을 고려한 발사 메서드
+    IEnumerator ShootWithDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Shoot();
     }
 
     void UpdateTarget()
@@ -52,7 +71,7 @@ public class Tower : MonoBehaviour
 
         if (fireCountdown <= 0)
         {
-            Shoot();
+            ShootMultipleBullets();
             fireCountdown = 1f / fireRate;
         }
 
@@ -61,6 +80,11 @@ public class Tower : MonoBehaviour
 
     void Shoot()
     {
+        if (target == null)
+        {
+            return;
+        }
+
         // 타겟 방향 벡터를 얻어옵니다.
         Vector3 targetDirection = (target.position - gunTransform.position).normalized;
 
@@ -69,7 +93,7 @@ public class Tower : MonoBehaviour
 
         // 총알 발사 위치의 Z축 회전을 설정합니다.
         gunTransform.rotation = Quaternion.Euler(0f, 0f, angle);
-        
+
         GameObject bulletGO = Instantiate(bulletPrefab, gunTransform.position, gunTransform.rotation);
         TowerBullet bullet = bulletGO.GetComponent<TowerBullet>();
         soundManager.PlaySound(0);

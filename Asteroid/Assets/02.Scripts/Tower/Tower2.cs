@@ -14,7 +14,7 @@ public class Tower2 : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f); // 주기적으로 타겟 업데이트
+        InvokeRepeating("UpdateTarget", 0f, 0.1f); // 주기적으로 타겟 업데이트
     }
 
     void UpdateTarget()
