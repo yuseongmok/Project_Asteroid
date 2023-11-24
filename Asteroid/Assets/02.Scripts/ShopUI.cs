@@ -113,6 +113,18 @@ public class ShopUI : MonoBehaviour
                 TowerSpeed.text = "느림";
                 TowerExplanation.text = "두발의 발사체를 발사";
                 break;
+            case 2:
+                TowerName.text = "스노우";
+                TowerPower.text = "공격력 100";
+                TowerSpeed.text = "보통";
+                TowerExplanation.text = "공격시 적 이동속도 30%감소";
+                break;
+            case 3:
+                TowerName.text = "용광";
+                TowerPower.text = "공격력 500";
+                TowerSpeed.text = "느림";
+                TowerExplanation.text = "다섯 번의 공격을 한다";
+                break;
 
             default:
 
