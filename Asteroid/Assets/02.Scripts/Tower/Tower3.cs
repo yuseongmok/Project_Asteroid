@@ -24,7 +24,7 @@ public class Tower3 : MonoBehaviour
         {
             for (int i = 0; i < 5; i++)
             {
-                StartCoroutine(ShootWithDelay(i * 0.2f));
+                StartCoroutine(ShootWithDelay(i * 0.3f));
             }
         }
     }

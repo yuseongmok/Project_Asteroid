@@ -103,8 +103,8 @@ MonoBehaviour:
   target: {fileID: 0}
   gunTransform: {fileID: 942404345656856857}
   bulletPrefab: {fileID: 3121810964294527954, guid: 15e080cfa7846e242a17341b5c69a901, type: 3}
-  range: 9
-  fireRate: 0.8
+  range: 16
+  fireRate: 0.5
   soundManager: {fileID: 5430335558391422382}
 --- !u!114 &5430335558391422382
 MonoBehaviour:

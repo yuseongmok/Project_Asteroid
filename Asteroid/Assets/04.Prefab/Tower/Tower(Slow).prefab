@@ -103,8 +103,8 @@ MonoBehaviour:
   target: {fileID: 0}
   gunTransform: {fileID: 942404345656856857}
   bulletPrefab: {fileID: 3121810964294527954, guid: 2e12f0e9a258932438fa83f16f8f787f, type: 3}
-  range: 11
-  fireRate: 0.91
+  range: 16
+  fireRate: 1
   soundManager: {fileID: -5648074569106051158}
 --- !u!114 &-5648074569106051158
 MonoBehaviour:
@@ -335,7 +335,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 4cbd62cdd98960343953f5fb9eff1e4e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea11fae99948704499a9344fedd2ed1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -371,8 +371,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5625420666290072122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.364, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.007, y: 0, z: 0}
+  m_LocalScale: {x: 1.06959, y: 1.4369363, z: 1.2828}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 942404345656856857}
@@ -419,7 +419,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d511f571421c07e418453882705f482b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ef15997e0f1b56458097fa675c435d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

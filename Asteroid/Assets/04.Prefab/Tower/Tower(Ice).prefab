@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 942404344750769532}
   - component: {fileID: 1949711486307867026}
   m_Layer: 0
-  m_Name: Tower(New)
+  m_Name: Tower(Ice)
   m_TagString: Turret
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
   target: {fileID: 0}
   gunTransform: {fileID: 942404345656856857}
   bulletPrefab: {fileID: 3121810964294527954, guid: 15e080cfa7846e242a17341b5c69a901, type: 3}
-  range: 9
+  range: 16
   fireRate: 0.5
   soundManager: {fileID: 5430335558391422382}
 --- !u!114 &5430335558391422382
@@ -335,7 +335,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 8100fc24bf7c27244bb5ee94cd708b48, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ea11fae99948704499a9344fedd2ed1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -371,8 +371,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5625420666290072122}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.364, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.9281836, y: 1.2375, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 942404345656856857}
@@ -419,7 +419,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: eaa4698d664503a4ba103bca7f116d0c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ef15997e0f1b56458097fa675c435d7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

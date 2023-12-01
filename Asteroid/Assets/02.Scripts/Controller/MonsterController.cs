@@ -67,7 +67,7 @@ public class MonsterController : MonoBehaviour
 
         if(other.CompareTag("Bullet_Slow"))
         {
-            moveSpeed = slow * 0.7f;    // 이동속도 30% 느려짐
+            moveSpeed = slow * 0.5f;    // 이동속도 50% 느려짐
             SlowTF = true;
         }
     }

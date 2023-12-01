@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Tower2 : MonoBehaviour
@@ -71,7 +70,7 @@ public class Tower2 : MonoBehaviour
         gunTransform.rotation = Quaternion.Euler(0f, 0f, angle);
 
         // 두 개의 총알 행 사이의 수직 오프셋을 계산합니다.
-        float verticalOffset = 0.5f; // 수직 오프셋을 조절하여 두 총알 행 사이의 간격을 제어합니다.
+        float verticalOffset = 0.25f; // 수직 오프셋을 조절하여 두 총알 행 사이의 간격을 제어합니다.
 
         // 두 개의 총알 행에 대한 위치를 계산합니다.
         Vector3 position1 = gunTransform.position + gunTransform.up * verticalOffset;
@@ -86,13 +85,9 @@ public class Tower2 : MonoBehaviour
         TowerBullet bullet1 = bulletGO1.GetComponent<TowerBullet>();
         TowerBullet bullet2 = bulletGO2.GetComponent<TowerBullet>();
         soundManager.PlaySound(0);
-        if (bullet1 != null)
+        if (bullet1 != null || bullet2 != null)
         {
             bullet1.Seek(target);
-        }
-
-        if (bullet2 != null)
-        {
             bullet2.Seek(target);
         }
     }
